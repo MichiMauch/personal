@@ -1,7 +1,7 @@
 ---
 title: "Estanque"
 date: 2022-01-14T20:25:23+01:00
-draft: false
+draft: true
 imageLocation: "Parque de El Retiro"
 imageDescription: "Un nuevo día amanece en El Retiro"
 imageAltDescription: ""

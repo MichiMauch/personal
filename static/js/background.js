@@ -1,4 +1,5 @@
 
+
 function next_bg() {
   var a = document.querySelector(".container_bg.bg_active");
   if (a) {
@@ -10,22 +11,22 @@ function next_bg() {
     document.querySelector('.title-div').classList.add("background--light");
   }
   var x = document.querySelectorAll(".container_bg.fade_out")
-  if (x.length>0) {
-    var i = getRandomArbitrary(0,x.length-1);
+  if (x.length > 0) {
+    var i = getRandomArbitrary(0, x.length - 1);
     var image = x[i].querySelector('.image');
     var img = new Image();
-    image.style.backgroundImage = "url('"+image.getAttribute("refer");+"')";
-    img.src = image.getAttribute("refer");
-    if (img.complete) img.onload();
-    img.onload = function() {
+    img.onload = function () {
       x[i].classList.toggle("fade_out");
       x[i].classList.toggle("fading");
       x[i].classList.toggle("bg_active");
     }
+    image.style.backgroundImage = "url('" + image.getAttribute("refer"); +"')";
+    img.src = image.getAttribute("refer");
+    if (img.complete) img.onload();
     //console.log("Choose background " + (i+1) + "/" + x.length);
     setTimeout(setActiveBackground, 1800);
   }
-  else console.log("No available background for " + document.getElementsByTagName("BODY")[0].getAttribute("orientation") + " orientation" );
+  else console.log("No available background for " + document.getElementsByTagName("BODY")[0].getAttribute("orientation") + " orientation");
 }
 
 function setActiveBackground() {
@@ -46,29 +47,29 @@ function toggle_info() {
 }
 
 function getOrientation() {
-  if( document.documentElement.clientWidth > document.documentElement.clientHeight  ) {
-      return "landscape";
+  if (document.documentElement.clientWidth > document.documentElement.clientHeight) {
+    return "landscape";
   }
   else {
-      return "portrait";
+    return "portrait";
   }
 }
 
 function checkOrientation() {
-    var currentOrientation = getOrientation();
-    var b = document.getElementsByTagName("BODY")[0];
-    if (currentOrientation.localeCompare(b.getAttribute("orientation"))){
-      b.setAttribute("orientation", currentOrientation);
-      var a = document.querySelector(".container_bg.bg_active");
-      if (a) {
-        a.classList.toggle("bg_active");
-        a.classList.toggle("fade_out");
-        a.classList.toggle("fading");
-      }
-      processOrientation();
-      next_bg();
+  var currentOrientation = getOrientation();
+  var b = document.getElementsByTagName("BODY")[0];
+  if (currentOrientation.localeCompare(b.getAttribute("orientation"))) {
+    b.setAttribute("orientation", currentOrientation);
+    var a = document.querySelector(".container_bg.bg_active");
+    if (a) {
+      a.classList.toggle("bg_active");
+      a.classList.toggle("fade_out");
+      a.classList.toggle("fading");
     }
+    processOrientation();
+    next_bg();
   }
+}
 
 function processOrientation() {
   var b = document.getElementsByTagName("BODY")[0];
@@ -79,15 +80,14 @@ function processOrientation() {
     let value = x[i].getAttribute("size");
     const aSize = value.split("x");
     let text = "undefined";
-    if (aSize[0]>aSize[1]) text = "landscape";
-    else if (aSize[0]<aSize[1]) text = "portrait";
+    if (aSize[0] > aSize[1]) text = "landscape";
+    else if (aSize[0] < aSize[1]) text = "portrait";
     else text = "square";
-    if (text.localeCompare(orientation))
-    {
+    if (text.localeCompare(orientation)) {
       x[i].classList.toggle("not_fit");
       x[i].classList.toggle("fade_out");
       not_fitting++;
     }
   }
-  console.log("Backgrounds available for "+ orientation +": "+(x.length-not_fitting))
+  console.log("Backgrounds available for " + orientation + ": " + (x.length - not_fitting))
 }
