@@ -20,7 +20,7 @@ function next_bg() {
       x[i].classList.toggle("fading");
       x[i].classList.toggle("bg_active");
     }
-    image.style.backgroundImage = "url('" + image.getAttribute("refer") + "')";
+    image.style.backgroundImage = "url('" + image.getAttribute("refer"); +"')";
     img.src = image.getAttribute("refer");
     if (img.complete) img.onload();
     console.log("Choose background " + (i + 1) + "/" + x.length);

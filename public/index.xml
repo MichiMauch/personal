@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hello World! on Welcom to my personal page</title>
+    <link>https://www.michimauch.ch/</link>
+    <description>Recent content in Hello World! on Welcom to my personal page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 12 Jan 2022 19:29:03 +0100</lastBuildDate><atom:link href="https://www.michimauch.ch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linkedin</title>
+      <link>https://www.michimauch.ch/profiles/linkedin/</link>
+      <pubDate>Wed, 12 Jan 2022 20:10:52 +0100</pubDate>
+      
+      <guid>https://www.michimauch.ch/profiles/linkedin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Estanque</title>
+      <link>https://www.michimauch.ch/backgrounds/estanque/</link>
+      <pubDate>Fri, 14 Jan 2022 20:25:23 +0100</pubDate>
+      
+      <guid>https://www.michimauch.ch/backgrounds/estanque/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>EstesPark</title>
+      <link>https://www.michimauch.ch/backgrounds/estespark/</link>
+      <pubDate>Fri, 14 Jan 2022 20:21:39 +0100</pubDate>
+      
+      <guid>https://www.michimauch.ch/backgrounds/estespark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BlueOil</title>
+      <link>https://www.michimauch.ch/backgrounds/blueoil/</link>
+      <pubDate>Fri, 14 Jan 2022 20:18:22 +0100</pubDate>
+      
+      <guid>https://www.michimauch.ch/backgrounds/blueoil/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cardiff</title>
+      <link>https://www.michimauch.ch/backgrounds/cardiff/</link>
+      <pubDate>Fri, 14 Jan 2022 20:14:33 +0100</pubDate>
+      
+      <guid>https://www.michimauch.ch/backgrounds/cardiff/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aqua</title>
+      <link>https://www.michimauch.ch/backgrounds/aqua/</link>
+      <pubDate>Fri, 14 Jan 2022 20:07:08 +0100</pubDate>
+      
+      <guid>https://www.michimauch.ch/backgrounds/aqua/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Giza</title>
+      <link>https://www.michimauch.ch/backgrounds/giza/</link>
+      <pubDate>Fri, 14 Jan 2022 19:53:37 +0100</pubDate>
+      
+      <guid>https://www.michimauch.ch/backgrounds/giza/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Twitter</title>
+      <link>https://www.michimauch.ch/profiles/twitter/</link>
+      <pubDate>Thu, 13 Jan 2022 22:28:16 +0100</pubDate>
+      
+      <guid>https://www.michimauch.ch/profiles/twitter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Refind</title>
+      <link>https://www.michimauch.ch/profiles/refind/</link>
+      <pubDate>Wed, 12 Jan 2022 20:11:07 +0100</pubDate>
+      
+      <guid>https://www.michimauch.ch/profiles/refind/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>https://www.michimauch.ch/profiles/blog/</link>
+      <pubDate>Wed, 12 Jan 2022 20:11:01 +0100</pubDate>
+      
+      <guid>https://www.michimauch.ch/profiles/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>https://www.michimauch.ch/profiles/github/</link>
+      <pubDate>Wed, 12 Jan 2022 20:11:01 +0100</pubDate>
+      
+      <guid>https://www.michimauch.ch/profiles/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unsplash</title>
+      <link>https://www.michimauch.ch/profiles/unsplash/</link>
+      <pubDate>Wed, 12 Jan 2022 20:10:52 +0100</pubDate>
+      
+      <guid>https://www.michimauch.ch/profiles/unsplash/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
