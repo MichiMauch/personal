@@ -1,7 +1,7 @@
 ---
 title: "BlueOil"
 date: 2022-01-14T20:18:22+01:00
-draft: true
+draft: false
 imageLocation: "The Netherlands"
 imageDescription: "Oil in water"
 imageAltDescription: ""

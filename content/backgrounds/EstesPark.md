@@ -1,7 +1,7 @@
 ---
 title: "EstesPark"
 date: 2022-01-14T20:21:39+01:00
-draft: true
+draft: false
 imageLocation: "Estes Park, United States"
 imageDescription: "On a clear night at Rocky Mountain National Park, my three friends and i were camping and the sky was clear as can be. I decided to have my shutter open or about 30 minutes and ended up with this picture! I never knew i would find the center “north” star so it was a lot of luck capturing a single star without a trail."
 imageAltDescription: ""
