@@ -1,7 +1,7 @@
 ---
 title: "Giza"
 date: 2022-01-14T19:53:37+01:00
-draft: true
+draft: false
 imageLocation: "Giza, Egypt"
 imageDescription: ""
 imageAltDescription: ""
