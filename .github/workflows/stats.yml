@@ -24,3 +24,11 @@ jobs:
       run: |
         ls -al /home/runner/work/personal/personal/content/visitors.txt
         cat /home/runner/work/personal/personal/content/visitors.txt
+
+    - name: Commit and push
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add content/visitors.txt
+        git commit -m "Update visitors.txt"
+        git push
