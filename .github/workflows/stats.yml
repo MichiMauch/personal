@@ -12,17 +12,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Test echo
-      run: echo "Hello, this is a test echo!"
-
     - name: Check curl output
       run: |
         curl "https://analytics.mauch.rocks/matomo/index.php?module=API&method=VisitsSummary.get&idSite=1&period=day&date=today&format=JSON&token_auth=a10ec06fb156efa4274fe4c06646c23f"
-
-    - name: Check directory and permissions
-      run: |
-        ls -al /home/runner/work/personal/personal/content
-        mkdir -p /home/runner/work/personal/personal/content
 
     - name: Read the file
       run: |
@@ -32,7 +24,12 @@ jobs:
       run: |
         VISITOR_COUNT=$(curl -s "https://analytics.mauch.rocks/matomo/index.php?module=API&method=VisitsSummary.get&idSite=1&period=day&date=today&format=JSON&token_auth=a10ec06fb156efa4274fe4c06646c23f" | jq '.nb_visits')
         echo "VISITOR_COUNT: $VISITOR_COUNT"  # Diese Zeile wird den Wert im Log ausgeben
-        echo "666" >> $GITHUB_ENV
+        echo "VISITOR_COUNT=$VISITOR_COUNT" >> $GITHUB_ENV
+  
+  - name: Simple write test
+      run: |
+        echo "Test" > /home/runner/work/personal/personal/content/visitors.txt
+
       
     - name: Update Hugo content with visitor count
       run: |
