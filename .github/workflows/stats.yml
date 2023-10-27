@@ -14,4 +14,4 @@ jobs:
   
     - name: Simple write test
       run: |
-        echo "Test" > /home/runner/work/personal/personal/content/visitors.txt
+        echo "Test" > content/visitors.txt
