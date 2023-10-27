@@ -14,13 +14,13 @@ jobs:
  
     - name: Debug before write
       run: |
-        ls -al content/visitors.txt
+        ls -al /home/runner/work/personal/personal/content/visitors.txt
     
     - name: Simple write test
       run: |
-        echo "Test" > content/visitors.txt
+        echo "Test" > /home/runner/work/personal/personal/content/visitors.txt
     
     - name: Debug after write
       run: |
-        ls -al content/visitors.txt
-    
+        ls -al /home/runner/work/personal/personal/content/visitors.txt
+        cat /home/runner/work/personal/personal/content/visitors.tx
