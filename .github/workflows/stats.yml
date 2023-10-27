@@ -1,0 +1,22 @@
+name: Update Visitors Count
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Jeden Tag um Mitternacht ausführen
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Fetch visitor count
+      run: |
+        VISITOR_COUNT=$(curl -s "https://analytics.mauch.rocks/matomo/index.php?module=API&method=VisitsSummary.get&idSite=1&period=day&date=today&format=JSON&token_auth=a10ec06fb156efa4274fe4c06646c23f" | jq '.value')
+        echo "VISITOR_COUNT=$VISITOR_COUNT" >> $GITHUB_ENV
+      
+    - name: Update Hugo content with visitor count
+      run: |
+        echo $VISITOR_COUNT > content/visitors.txt  # Oder wo immer du die Daten in deinem Hugo-Projekt speichern möchtest
