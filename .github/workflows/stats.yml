@@ -14,6 +14,11 @@ jobs:
 
     - name: Test echo
       run: echo "Hello, this is a test echo!"
+
+    - name: Check curl output
+      run: |
+        curl "https://analytics.mauch.rocks/matomo/index.php?module=API&method=VisitsSummary.get&idSite=1&period=day&date=today&format=JSON&token_auth=a10ec06fb156efa4274fe4c06646c23f"
+
       
     - name: Fetch visitor count
       run: |
