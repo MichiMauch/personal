@@ -1,11 +1,27 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 {{ if .Site.Params.ga_tracking_id}}
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.ga_tracking_id }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.ga_tracking_id }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
 
-    gtag('config', '{{ .Site.Params.ga_tracking_id }}');
-  </script><!--for overriding-->
+  gtag('config', '{{ .Site.Params.ga_tracking_id }}');
+</script>
+<!--for overriding-->
 {{ end }}
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function () {
+    var u = "//analytics.mauch.rocks/matomo/";
+    _paq.push(['setTrackerUrl', u + 'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+    g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+  })();
+</script>
+<!-- End Matomo Code -->
