@@ -23,14 +23,12 @@ jobs:
     - name: Fetch visitor count
       run: |
         VISITOR_COUNT=$(curl -s "https://analytics.mauch.rocks/matomo/index.php?module=API&method=VisitsSummary.get&idSite=1&period=day&date=today&format=JSON&token_auth=a10ec06fb156efa4274fe4c06646c23f" | jq '.nb_visits')
-        echo "VISITOR_COUNT: $VISITOR_COUNT"  # Diese Zeile wird den Wert im Log ausgeben
         echo "VISITOR_COUNT=$VISITOR_COUNT" >> $GITHUB_ENV
   
-  - name: Simple write test
+    - name: Simple write test
       run: |
         echo "Test" > /home/runner/work/personal/personal/content/visitors.txt
 
-      
     - name: Update Hugo content with visitor count
       run: |
         echo $VISITOR_COUNT > /home/runner/work/personal/personal/content/visitors.txt  # Oder wo immer du die Daten in deinem Hugo-Projekt speichern möchtest
