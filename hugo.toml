@@ -1,3 +1,5 @@
 baseURL = 'https://www.michimauch.ch/'
 languageCode = 'en-us'
 title = 'Welcom to my personal page'
+# Set the data directory to `content`
+dataDir = "content"
