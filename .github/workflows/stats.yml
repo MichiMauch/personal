@@ -28,4 +28,4 @@ jobs:
       
     - name: Update Hugo content with visitor count
       run: |
-        echo $VISITOR_COUNT > content/visitors.txt  # Oder wo immer du die Daten in deinem Hugo-Projekt speichern möchtest
+        echo $VISITOR_COUNT > /home/runner/work/personal/personal/content/visitors.txt  # Oder wo immer du die Daten in deinem Hugo-Projekt speichern möchtest
