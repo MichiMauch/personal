@@ -23,4 +23,4 @@ jobs:
     - name: Debug after write
       run: |
         ls -al /home/runner/work/personal/personal/content/visitors.txt
-        cat /home/runner/work/personal/personal/content/visitors.tx
+        cat /home/runner/work/personal/personal/content/visitors.txt
