@@ -7,28 +7,36 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    steps:
+    
+  steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
- 
-    - name: Debug before write
-      run: |
-        ls -al /home/runner/work/personal/personal/content/visitors.txt
+    §uses: actions/checkout@v3
+    
+    - name: Check curl output
+        run: |
+          curl “https://analytics.mauch.rocks/matomo/index.php?module=API&method=VisitsSummary.get&idSite=1&period=day&date=today&format=JSON&token_auth=a10ec06fb156efa4274fe4c06646c23f”
+    
+    - name: Read the file
+        run: |
+            cat /home/runner/work/personal/personal/content/visitors.txt
+   
+    - name: Fetch visitor count
+        run: |
+          VISITOR_COUNT=$(curl -s “https://analytics.mauch.rocks/matomo/index.php?module=API&method=VisitsSummary.get&idSite=1&period=day&date=today&format=JSON&token_auth=a10ec06fb156efa4274fe4c06646c23f” | jq ‘.nb_visits’)
+          echo “VISITOR_COUNT=$VISITOR_COUNT” >> $GITHUB_ENV
     
     - name: Simple write test
-      run: |
-        echo "Test" > /home/runner/work/personal/personal/content/visitors.txt
+        run: |
+          echo “Test” > /home/runner/work/personal/personal/content/visitors.txt
     
-    - name: Debug after write
-      run: |
-        ls -al /home/runner/work/personal/personal/content/visitors.txt
-        cat /home/runner/work/personal/personal/content/visitors.txt
-
+    - name: Update Hugo content with visitor count
+        run: |
+          echo $VISITOR_COUNT > /home/runner/work/personal/personal/content/visitors.txt  # Oder wo immer du die Daten in deinem Hugo-Projekt speichern möchtest
+    
     - name: Commit and push
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add content/visitors.txt
-        git commit -m "Update visitors.txt"
-        git push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add content/visitors.txt
+          git commit -m "Update visitors.txt"
+          git push
