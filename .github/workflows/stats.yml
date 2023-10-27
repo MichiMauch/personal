@@ -11,7 +11,16 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
-  
+ 
+    - name: Debug before write
+      run: |
+        ls -al content/visitors.txt
+    
     - name: Simple write test
       run: |
         echo "Test" > content/visitors.txt
+    
+    - name: Debug after write
+      run: |
+        ls -al content/visitors.txt
+    
