@@ -19,6 +19,14 @@ jobs:
       run: |
         curl "https://analytics.mauch.rocks/matomo/index.php?module=API&method=VisitsSummary.get&idSite=1&period=day&date=today&format=JSON&token_auth=a10ec06fb156efa4274fe4c06646c23f"
 
+    - name: Check directory and permissions
+      run: |
+        ls -al /home/runner/work/personal/personal/content
+        mkdir -p /home/runner/work/personal/personal/content
+
+    - name: Read the file
+      run: |
+        cat /home/runner/work/personal/personal/content/visitors.txt
       
     - name: Fetch visitor count
       run: |
